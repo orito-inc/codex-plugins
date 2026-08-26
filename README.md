@@ -7,7 +7,7 @@
 Marketplaceを追加します。
 
 ```bash
-codex plugin marketplace add orito-inc/codex-plugins --ref main
+codex plugin marketplace add orito-inc/codex-plugins
 ```
 
 利用するPluginをインストールします。
