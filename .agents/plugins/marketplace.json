@@ -1,0 +1,20 @@
+{
+  "name": "orito",
+  "interface": {
+    "displayName": "Orito"
+  },
+  "plugins": [
+    {
+      "name": "implementation-brief",
+      "source": {
+        "source": "local",
+        "path": "./plugins/implementation-brief"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

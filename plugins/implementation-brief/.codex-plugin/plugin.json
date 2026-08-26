@@ -1,0 +1,35 @@
+{
+  "name": "implementation-brief",
+  "version": "1.0.0",
+  "description": "Turn settled decisions into a structured implementation handoff",
+  "author": {
+    "name": "Orito Inc.",
+    "email": "info@orito-inc.co.jp",
+    "url": "https://www.orito-inc.co.jp/"
+  },
+  "homepage": "https://github.com/orito-inc/codex-plugins/tree/main/plugins/implementation-brief",
+  "repository": "https://github.com/orito-inc/codex-plugins",
+  "license": "MIT",
+  "keywords": [
+    "codex",
+    "skill",
+    "requirements",
+    "implementation-brief",
+    "handoff"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Implementation Brief",
+    "shortDescription": "Turn settled decisions into an implementation brief",
+    "longDescription": "Convert confirmed decisions from a completed grilling or requirements conversation into a structured implementation handoff without creating files or starting implementation.",
+    "developerName": "Orito Inc.",
+    "category": "Productivity",
+    "capabilities": [],
+    "websiteURL": "https://www.orito-inc.co.jp/",
+    "privacyPolicyURL": "https://www.orito-inc.co.jp/privacy",
+    "defaultPrompt": [
+      "Turn the confirmed decisions in this conversation into an implementation brief."
+    ],
+    "brandColor": "#185FA5"
+  }
+}
