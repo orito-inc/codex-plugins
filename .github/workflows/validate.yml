@@ -1,0 +1,61 @@
+name: Validate plugin marketplace
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate marketplace
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Set up Node.js
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: 24
+
+      - name: Install Codex CLI
+        run: npm install --global @openai/codex@0.149.1
+
+      - name: Validate marketplace and plugins
+        shell: bash
+        run: |
+          codex plugin marketplace add "$GITHUB_WORKSPACE"
+
+          python3 - <<'PY' > "$RUNNER_TEMP/plugin-selectors"
+          import json
+          from pathlib import Path
+
+          marketplace_path = Path(".agents/plugins/marketplace.json")
+          marketplace = json.loads(marketplace_path.read_text(encoding="utf-8"))
+
+          marketplace_name = marketplace.get("name")
+          if not isinstance(marketplace_name, str) or not marketplace_name:
+              raise SystemExit("marketplace.json must contain a non-empty name")
+
+          plugins = marketplace.get("plugins")
+          if not isinstance(plugins, list) or not plugins:
+              raise SystemExit("marketplace.json must contain at least one plugin")
+
+          for plugin in plugins:
+              plugin_name = plugin.get("name") if isinstance(plugin, dict) else None
+              if not isinstance(plugin_name, str) or not plugin_name:
+                  raise SystemExit("every marketplace plugin must have a non-empty name")
+              print(f"{plugin_name}@{marketplace_name}")
+          PY
+
+          while IFS= read -r plugin_selector; do
+            codex plugin add "$plugin_selector"
+          done < "$RUNNER_TEMP/plugin-selectors"
