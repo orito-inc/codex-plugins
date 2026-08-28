@@ -1,0 +1,4 @@
+interface:
+  display_name: "ELI New"
+  short_description: "前提知識ゼロの大人向けに具体例と仕組みをつなぐ説明"
+  default_prompt: "$eli-new を使って、OAuth 2.0を前提知識のない大人向けに説明してください。"
