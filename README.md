@@ -68,11 +68,38 @@ $eli-new を使って、OAuth 2.0を前提知識のない大人向けに説明�
 - 同名の既存ファイルを上書きせず、ブラウザを自動起動しません。
 - 明示的な依頼がない限り、生成物を公開・アップロードしません。
 
+## YAGNI Review
+
+`yagni-review`は、PRD、設計書、Implementation Brief、実装計画、ソースコードを対象に、現在の目的に不要なスコープや複雑性をYAGNI/KISSの観点で見直すSkillです。
+
+### Installation
+
+```bash
+codex plugin add yagni-review@orito
+```
+
+### Usage
+
+レビュー対象とともに明示的に呼び出します。
+
+```text
+$yagni-review を使って、この実装計画を現在の目的に必要な最小構成へ見直してください。
+```
+
+### Behavior
+
+- 現在の目的、成功条件、利用者、規模、期限、拘束条件をレビューの基準にします。
+- 各要素を`Keep`、`Simplify`、`Remove`、`Verify`のいずれかに分類します。
+- 確定済み要件も現在の必要性を示す根拠と照合し、将来向けの汎用性や投機的な規模対応を除きます。
+- 必要な安全性や正しさを維持しつつ、未要求の仕組みを追加しない最小版を提示します。
+- 結果は推奨事項として返し、明示依頼がない限り対象の編集や実装は行いません。
+- 自動呼び出しは無効です。`$yagni-review`で明示的に呼び出してください。
+
 ## Publication scope
 
 このリポジトリでの公開は、GitHubでホストするOrito Codex Plugins Marketplaceへの掲載です。OpenAI公式のUniversal Plugin Directoryへの申請・掲載とは別であり、このMarketplaceへの追加だけで公式Directory掲載済みになるものではありません。
 
-OpenAI公式仕様は2026-08-28に確認しています。
+OpenAI公式仕様は2026-09-03に確認しています。
 
 - [Build skills](https://developers.openai.com/plugins/build/skills)
 - [Package your plugin](https://developers.openai.com/plugins/build/plugins)

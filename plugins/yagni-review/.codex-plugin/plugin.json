@@ -1,0 +1,36 @@
+{
+  "name": "yagni-review",
+  "version": "1.0.0",
+  "description": "Review artifacts for unnecessary scope and complexity",
+  "author": {
+    "name": "Orito Inc.",
+    "email": "info@orito-inc.co.jp",
+    "url": "https://www.orito-inc.co.jp/"
+  },
+  "homepage": "https://github.com/orito-inc/codex-plugins/tree/main/plugins/yagni-review",
+  "repository": "https://github.com/orito-inc/codex-plugins",
+  "license": "MIT",
+  "keywords": [
+    "codex",
+    "skill",
+    "yagni",
+    "kiss",
+    "scope-review",
+    "complexity-reduction"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "YAGNI Review",
+    "shortDescription": "Review scope and complexity against current objectives",
+    "longDescription": "Review a PRD, design, implementation brief, plan, or source code and recommend the minimum scope needed for current outcomes, constraints, and verified risks.",
+    "developerName": "Orito Inc.",
+    "category": "Productivity",
+    "capabilities": [],
+    "websiteURL": "https://www.orito-inc.co.jp/",
+    "privacyPolicyURL": "https://www.orito-inc.co.jp/privacy",
+    "defaultPrompt": [
+      "Use $yagni-review to review this artifact and reduce it to the minimum needed for the current objective."
+    ],
+    "brandColor": "#185FA5"
+  }
+}
