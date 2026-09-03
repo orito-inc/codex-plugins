@@ -1,0 +1,6 @@
+interface:
+  display_name: "YAGNI Review"
+  short_description: "YAGNI/KISS観点で要件・設計・実装を最小化"
+  default_prompt: "Use $yagni-review to review this artifact and reduce it to the minimum needed for the current objective."
+policy:
+  allow_implicit_invocation: false
