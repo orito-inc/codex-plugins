@@ -9,16 +9,9 @@ Explain the topic for an adult with no prior knowledge. Build a correct mental m
 
 ## Explanation contract
 
-The main explanation should let the reader answer:
-
-- What is it?
-- Why does it exist?
-- How does it work at a high level?
-- What is one concrete example?
-
 Present the explanation in this order:
 
-1. State the purpose in one or two sentences.
+1. State what it is and why it exists in one or two sentences.
 2. Give one concrete example or useful analogy. Prefer a real example when an analogy would distort the concept.
 3. Connect the example's parts to the real terms.
 4. Show the mechanism with a visual containing roughly three to five important elements.

@@ -1,6 +1,6 @@
 {
   "name": "eli-new",
-  "version": "1.0.0",
+  "version": "1.0.0+codex.20260909050336",
   "description": "Create accurate visual explanations for adults with no prior knowledge",
   "author": {
     "name": "Orito Inc.",
@@ -28,7 +28,7 @@
     "websiteURL": "https://www.orito-inc.co.jp/",
     "privacyPolicyURL": "https://www.orito-inc.co.jp/privacy",
     "defaultPrompt": [
-      "Use $eli-new to explain OAuth 2.0 to an adult with no prior knowledge."
+      "Use $eli-new to explain the specified topic to an adult with no prior knowledge."
     ],
     "brandColor": "#185FA5"
   }
