@@ -1,0 +1,35 @@
+{
+  "name": "conformist",
+  "version": "1.0.0",
+  "description": "Follow repository conventions and reuse existing implementations",
+  "author": {
+    "name": "Orito Inc.",
+    "email": "info@orito-inc.co.jp",
+    "url": "https://www.orito-inc.co.jp/"
+  },
+  "homepage": "https://github.com/orito-inc/codex-plugins/tree/main/plugins/conformist",
+  "repository": "https://github.com/orito-inc/codex-plugins",
+  "license": "MIT",
+  "keywords": [
+    "codex",
+    "skill",
+    "repository-conventions",
+    "existing-patterns",
+    "code-reuse"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Conformist",
+    "shortDescription": "Follow existing patterns and reuse suitable components",
+    "longDescription": "Find comparable implementations before designing or editing code, follow applicable repository rules and established patterns, and reuse suitable components without carrying forward bugs or rule violations.",
+    "developerName": "Orito Inc.",
+    "category": "Productivity",
+    "capabilities": [],
+    "websiteURL": "https://www.orito-inc.co.jp/",
+    "privacyPolicyURL": "https://www.orito-inc.co.jp/privacy",
+    "defaultPrompt": [
+      "Use $conformist to implement this change using existing repository patterns and components."
+    ],
+    "brandColor": "#185FA5"
+  }
+}

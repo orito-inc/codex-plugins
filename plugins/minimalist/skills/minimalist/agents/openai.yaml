@@ -1,0 +1,6 @@
+interface:
+  display_name: "Minimalist"
+  short_description: "文書やコードを要件・目的・前提から見直し、最小成立形へ削減"
+  default_prompt: "Use $minimalist to reduce this document or code to the minimum needed for the agreed outcome."
+policy:
+  allow_implicit_invocation: false
