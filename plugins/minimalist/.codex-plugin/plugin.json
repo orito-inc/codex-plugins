@@ -1,0 +1,35 @@
+{
+  "name": "minimalist",
+  "version": "1.0.0",
+  "description": "Reduce documents and code to the minimum needed for agreed outcomes",
+  "author": {
+    "name": "Orito Inc.",
+    "email": "info@orito-inc.co.jp",
+    "url": "https://www.orito-inc.co.jp/"
+  },
+  "homepage": "https://github.com/orito-inc/codex-plugins/tree/main/plugins/minimalist",
+  "repository": "https://github.com/orito-inc/codex-plugins",
+  "license": "MIT",
+  "keywords": [
+    "codex",
+    "skill",
+    "minimalism",
+    "scope-reduction",
+    "simplification"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Minimalist",
+    "shortDescription": "Reduce scope, assumptions, and complexity",
+    "longDescription": "Review requirements, goals, assumptions, documents, and code to identify the smallest viable form. Propose changes to agreed requirements before applying them, and preserve correctness and necessary safety.",
+    "developerName": "Orito Inc.",
+    "category": "Productivity",
+    "capabilities": [],
+    "websiteURL": "https://www.orito-inc.co.jp/",
+    "privacyPolicyURL": "https://www.orito-inc.co.jp/privacy",
+    "defaultPrompt": [
+      "Use $minimalist to reduce this document or code to the minimum needed for the agreed outcome."
+    ],
+    "brandColor": "#185FA5"
+  }
+}

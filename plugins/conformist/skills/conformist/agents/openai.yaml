@@ -1,0 +1,6 @@
+interface:
+  display_name: "Conformist"
+  short_description: "リポジトリの既存パターン・慣習を踏襲し、適切な既存部品を再利用"
+  default_prompt: "Use $conformist to implement this change using existing repository patterns and components."
+policy:
+  allow_implicit_invocation: false
